@@ -26,8 +26,39 @@ fn rps_math() {
         println!("AI chose Rock");
     } else if ai_choice == 2 {
         println!("AI chose Paper");
-    } else if ai_choice == 3 {
+    } else {
         println!("AI chose Scissors");
+    }
+}
+
+fn start() {
+    println!("Starting game...");
+    println!("Rock, Paper, Scissors!");
+    println!("Choose your weapon:");
+    println!("[1] Rock");
+    println!("[2] Paper");
+    println!("[3] Scissors");
+
+    let mut input = String::new();
+    io::stdin()
+        .read_line(&mut input)
+        .expect("Found invalid character. Please input a number");
+    let input: i32 = input
+        .trim()
+        .parse()
+        .expect("Found invalid character. Please input a number");
+
+    if input == 1 {
+        println!("You chose Rock");
+        rps_math();
+    } else if input == 2 {
+        println!("You chose Paper");
+        rps_math();
+    } else if input == 3 {
+        println!("You chose Scissors");
+        rps_math();
+    } else {
+        println!("Invalid input. Please input a number");
     }
 }
 
@@ -38,7 +69,7 @@ fn main() {
 
     // If statements to sort number and call function
     if x == 1 {
-        rps_math();
+        start();
     }
 
     if x == 3 {
