@@ -1,5 +1,5 @@
-use std::io;
 use colour::*;
+use std::io;
 
 // A function that gets user input and returns it as a i32
 fn get_number() -> i32 {
