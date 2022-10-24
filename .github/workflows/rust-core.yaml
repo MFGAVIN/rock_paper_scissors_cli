@@ -36,7 +36,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
   
 # Runs rust clippy for any and all suggestions
-on: push
 name: Clippy check
 jobs:
   clippy_check:
