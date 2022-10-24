@@ -1,5 +1,12 @@
 use std::io;
 
+// A function that gets user input and returns it as a i32
+fn get_number() -> i32 {
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Failed to read line");
+    input.trim().parse().expect("Failed to parse input")
+}
+
 fn main() {
     println!("Hello, world!");
 
@@ -10,9 +17,6 @@ fn main() {
     println!("[3] Quit");
 
     // Menu Input
-    let mut number = String::new();
-    io::stdin()
-        .read_line(&mut number)
-        // Error Handler
-        .expect("Failed to read input");
+    let x = get_number();
+    println!("You selected {}", x);
 }
