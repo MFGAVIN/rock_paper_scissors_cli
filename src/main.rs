@@ -16,14 +16,9 @@ fn menu() -> i32 {
     input.trim().parse().expect("Failed to parse input")
 }
 
-fn start_game() {
+fn start_game() {}
 
-}
-
-fn unfair_mode() {
-    
-}
-
+fn unfair_mode() {}
 
 fn main() {
     // Menu Input
