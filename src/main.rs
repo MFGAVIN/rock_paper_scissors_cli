@@ -1,5 +1,6 @@
 use colour::*;
 use std::io;
+use rand::*;
 
 // A function that gets user input and returns it as a i32
 fn menu() -> i32 {
@@ -19,9 +20,16 @@ fn menu() -> i32 {
         .expect("Found invalid character. Please input a number")
 }
 
-fn start_game() {}
-
-fn unfair_mode() {}
+fn rps_math() {
+    let ai_choice = rand::thread_rng().gen_range(1..3);
+    if ai_choice == 1 {
+        println!("AI chose Rock");
+    } else if ai_choice == 2 {
+        println!("AI chose Paper");
+    } else if ai_choice == 3 {
+        println!("AI chose Scissors");
+    }
+}
 
 fn main() {
     // Menu Input
@@ -30,10 +38,10 @@ fn main() {
 
     // If statements to sort number and call function
     if x == 1 {
-        start_game();
-    } else if x == 2 {
-        unfair_mode();
-    } else if x == 3 {
+        rps_math();
+    }
+
+    if x == 3 {
         std::process::abort();
     }
 }
