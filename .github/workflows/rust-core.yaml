@@ -36,9 +36,9 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
   
 # Runs rust clippy for any and all suggestions
-name: Clippy check
-jobs:
   clippy_check:
+    name: Clippy check
+    clippy_check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
