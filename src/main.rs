@@ -2,8 +2,8 @@ use colour::*;
 use rand::*;
 use std::io;
 
-fn clear_terminal(){
-    print!("{esc}c", esc = 27 as char); 
+fn clear_terminal() {
+    print!("{esc}c", esc = 27 as char);
 }
 
 // A function that gets user input and returns it as a i32
