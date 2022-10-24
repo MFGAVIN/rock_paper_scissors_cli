@@ -1,6 +1,6 @@
 use colour::*;
-use std::io;
 use rand::*;
+use std::io;
 
 // A function that gets user input and returns it as a i32
 fn menu() -> i32 {
