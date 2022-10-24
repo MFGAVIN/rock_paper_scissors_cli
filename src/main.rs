@@ -13,7 +13,10 @@ fn menu() -> i32 {
     io::stdin()
         .read_line(&mut input)
         .expect("Found invalid character. Please input a number");
-    input.trim().parse().expect("Found invalid character. Please input a number")
+    input
+        .trim()
+        .parse()
+        .expect("Found invalid character. Please input a number")
 }
 
 fn start_game() {}
