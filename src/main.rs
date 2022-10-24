@@ -1,10 +1,11 @@
 use std::io;
+use colour::*;
 
 // A function that gets user input and returns it as a i32
 fn get_number() -> i32 {
     let mut input = String::new();
-    io::stdin().read_line(&mut input).expect("Failed to read line");
-    input.trim().parse().expect("Failed to parse input")
+    io::stdin().read_line(&mut input).expect("Found invalid character. Please input a number");
+    input.trim().parse().expect("Found invalid character. Please input a number")
 }
 
 fn main() {
