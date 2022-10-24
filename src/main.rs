@@ -1,5 +1,5 @@
 use colour::*;
-use std::{io, process::exit};
+use std::io;
 
 // A function that gets user input and returns it as a i32
 fn menu() -> i32 {
@@ -34,6 +34,6 @@ fn main() {
     } else if x == 2 {
         unfair_mode();
     } else if x == 3 {
-        exit;
+        std::process::abort();
     }
 }
