@@ -2,8 +2,13 @@ use colour::*;
 use rand::*;
 use std::io;
 
+fn clear_terminal(){
+    print!("{esc}c", esc = 27 as char); 
+}
+
 // A function that gets user input and returns it as a i32
 fn menu() -> i32 {
+    clear_terminal();
     // Menu Options
     println!("Select an option from below:");
     println!("[1] Start");
@@ -32,6 +37,7 @@ fn rps_math() {
 }
 
 fn start() {
+    clear_terminal();
     println!("Starting game...");
     println!("Rock, Paper, Scissors!");
     println!("Choose your weapon:");
@@ -59,10 +65,12 @@ fn start() {
         rps_math();
     } else {
         println!("Invalid input. Please input a number");
+        menu();
     }
 }
 
 fn main() {
+    clear_terminal();
     // Menu Input
     let x = menu();
     println!("You selected {}", x);
